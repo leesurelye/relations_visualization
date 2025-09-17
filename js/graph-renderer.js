@@ -405,7 +405,7 @@ class GraphRenderer {
         );
 
         if (matchingTags.length === 0) {
-            console.log(`未找到tag_id: ${tagId}`);
+            this.showSearchError(`未找到tag_id: ${tagId}`);
             return;
         }
 
@@ -418,7 +418,8 @@ class GraphRenderer {
         // 高亮相关的边
         this.highlightEdgesByRelationIds(Array.from(relationIds));
         
-        console.log(`找到 ${matchingTags.length} 个匹配的tag，涉及 ${relationIds.size} 个关系`);
+        // 显示成功提示
+        this.showSearchSuccess(`找到 ${matchingTags.length} 个匹配的tag，涉及 ${relationIds.size} 个关系`);
     }
 
     /**
@@ -562,6 +563,69 @@ class GraphRenderer {
         if (popup) {
             popup.style.display = 'none';
         }
+    }
+
+    /**
+     * 显示搜索错误提示
+     */
+    showSearchError(message) {
+        this.showSearchMessage(message, 'error');
+    }
+
+    /**
+     * 显示搜索成功提示
+     */
+    showSearchSuccess(message) {
+        this.showSearchMessage(message, 'success');
+    }
+
+    /**
+     * 显示搜索消息弹窗
+     */
+    showSearchMessage(message, type = 'info') {
+        // 创建或获取搜索提示弹窗
+        let searchPopup = document.getElementById('search-popup');
+        if (!searchPopup) {
+            searchPopup = document.createElement('div');
+            searchPopup.id = 'search-popup';
+            searchPopup.className = 'search-popup';
+            document.body.appendChild(searchPopup);
+        }
+
+        // 设置样式
+        const isError = type === 'error';
+        searchPopup.style.cssText = `
+            position: fixed;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: ${isError ? '#ff6b6b' : '#4CAF50'};
+            background: white;
+            border: 1px solid ${isError ? '#ff6b6b' : '#4CAF50'};
+            padding: 20px 30px;
+            border-radius: 8px;
+            z-index: 2000;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            max-width: 400px;
+            word-wrap: break-word;
+        `;
+
+        searchPopup.textContent = message;
+        searchPopup.style.display = 'block';
+
+        // 3秒后自动隐藏
+        setTimeout(() => {
+            if (searchPopup) {
+                searchPopup.style.display = 'none';
+            }
+        }, 3000);
+
+        // 点击隐藏
+        searchPopup.onclick = () => {
+            searchPopup.style.display = 'none';
+        };
     }
 
     /**
