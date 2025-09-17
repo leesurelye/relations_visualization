@@ -1,0 +1,365 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fafafa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow: hidden;
+}
+
+#graph-container {
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/* D3图形样式 */
+.node {
+    cursor: grab;
+    stroke: #fff;
+    stroke-width: 3px;
+}
+
+.node:active {
+    cursor: grabbing;
+}
+
+.node:hover {
+    stroke-width: 4px;
+    filter: brightness(1.1);
+}
+
+.node-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-anchor: middle;
+    pointer-events: none;
+    fill: white;
+    cursor: grab;
+}
+
+.node-label:active {
+    cursor: grabbing;
+}
+
+.link {
+    stroke-opacity: 0.8;
+    stroke-width: 3px;
+}
+
+.link:hover {
+    stroke-opacity: 1;
+    stroke-width: 4px;
+}
+
+.link-label {
+    font-size: 11px;
+    font-weight: 600;
+    fill: #333;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+/* 工具提示样式 */
+.tooltip {
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 1000;
+    max-width: 300px;
+    line-height: 1.4;
+}
+
+
+/* 加载动画 */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    font-size: 18px;
+    color: #666;
+}
+
+.loading::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-top: 2px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Condition悬浮窗口样式 */
+.condition-popup {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 400px;
+    max-height: 500px;
+    background: white;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.condition-header {
+    background: #667eea;
+    color: white;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.condition-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.condition-content {
+    padding: 16px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.condition-info {
+    margin-bottom: 16px;
+}
+
+.condition-info p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.condition-info strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.condition-details h4 {
+    margin: 0 0 8px 0;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.condition-details pre {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #495057;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* 搜索栏样式 */
+.search-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    padding: 16px;
+}
+
+.search-box {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+#search-input {
+    flex: 1;
+    top: 20px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#search-input:focus {
+    border-color: #667eea;
+}
+
+.search-btn, .clear-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-btn {
+    background: #667eea;
+    color: white;
+}
+
+.search-btn:hover {
+    background: #5a6fd8;
+}
+
+.clear-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.clear-btn:hover {
+    background: #5a6268;
+}
+
+.search-results {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+    max-height: 150px;
+    overflow-y: auto;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.search-results .result-item {
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.search-results .result-item:last-child {
+    border-bottom: none;
+}
+
+.search-results .highlight {
+    background: #fff3cd;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+/* 控制面板样式 */
+.control-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    /* background: white; */
+    /* padding: 15px; */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 20px rgba(0,0,0,0.15); */
+    min-width: 250px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.control-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-end;
+}
+
+.control-item {
+    width: 100%;
+}
+
+.control-item label {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.tenant-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 140px;
+}
+
+.tenant-select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.search-box {
+    display: flex;
+    gap: 8px;
+    /* align-items: center; */
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}

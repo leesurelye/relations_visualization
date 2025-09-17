@@ -1,0 +1,922 @@
+[
+  {
+    "id": 10000242,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061733_multi_path_th.default.multi_test_region",
+    "dst_table": "tn_24061733_multi_path_th.default.multi_test_shop",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "address_code",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_shop",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "address_code",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_region",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-14 19:46:51.233000",
+    "gmt_update": "2025-09-14 19:46:51.233000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061733",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000243,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061733_multi_path_th.default.multi_test_region",
+    "dst_table": "tn_24061733_multi_path_th.default.multi_test_orders",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "address_code",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_orders",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "address_code",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_region",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-14 19:48:22.176000",
+    "gmt_update": "2025-09-14 19:48:22.176000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061733",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000244,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061733_multi_path_th.default.multi_test_region",
+    "dst_table": "tn_24061733_multi_path_th.default.multi_test_users",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "address_code",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_users",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "address_code",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_region",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-14 19:49:36.911000",
+    "gmt_update": "2025-09-14 19:49:36.911000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061733",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000245,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_ONE",
+    "direction": "SINGLE",
+    "src_table": "tn_24061733_multi_path_th.default.multi_test_user_profile",
+    "dst_table": "tn_24061733_multi_path_th.default.multi_test_users",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "user_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_users",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "user_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_user_profile",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-14 19:50:57.165000",
+    "gmt_update": "2025-09-14 19:50:57.165000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061733",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000246,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061733_multi_path_th.default.multi_test_users",
+    "dst_table": "tn_24061733_multi_path_th.default.multi_test_orders",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "buyer_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_orders",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "user_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_users",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-14 19:51:44.848000",
+    "gmt_update": "2025-09-14 19:51:44.848000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061733",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000247,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061733_multi_path_th.default.multi_test_users",
+    "dst_table": "tn_24061733_multi_path_th.default.multi_test_orders",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "seller_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_orders",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "user_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_users",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-14 19:52:52.996000",
+    "gmt_update": "2025-09-14 19:52:52.996000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061733",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000248,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061733_multi_path_th.default.multi_test_product",
+    "dst_table": "tn_24061733_multi_path_th.default.multi_test_shop_product",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "product_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_shop_product",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "product_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_product",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-14 19:53:47.394000",
+    "gmt_update": "2025-09-14 19:53:47.394000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061733",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000249,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061733_multi_path_th.default.multi_test_shop",
+    "dst_table": "tn_24061733_multi_path_th.default.multi_test_shop_product",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "shop_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_shop_product",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "shop_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_shop",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-14 19:54:37.740000",
+    "gmt_update": "2025-09-14 19:54:37.740000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061733",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000250,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061733_multi_path_th.default.multi_test_shop",
+    "dst_table": "tn_24061733_multi_path_th.default.multi_test_orders",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "shop_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_orders",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "shop_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_shop",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-14 19:55:18.239000",
+    "gmt_update": "2025-09-14 19:55:18.239000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061733",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {
+      "dynamicConditions": [
+        "[multi_test_orders/${join_dt}] > [multi_test_shop/created_at]",
+        "${join_rel}"
+      ],
+      "dynamicSrcFilters": [
+        "[multi_test_shop/${dt}]=MAXVALUE([multi_test_shop/${dt])",
+        "${dst_filter}"
+      ]
+    }
+  },
+  {
+    "id": 10000251,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061733_multi_path_th.default.multi_test_product",
+    "dst_table": "tn_24061733_multi_path_th.default.multi_test_orders",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "product_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_orders",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "product_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_product",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-14 19:55:51.228000",
+    "gmt_update": "2025-09-14 19:55:51.228000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061733",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000252,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061733_multi_path_th.default.multi_test_category",
+    "dst_table": "tn_24061733_multi_path_th.default.multi_test_product",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "category_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_product",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "category_id",
+          "tableRef": "tn_24061733_multi_path_th.default.multi_test_category",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-14 19:56:29.899000",
+    "gmt_update": "2025-09-14 19:56:29.899000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061733",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000231,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061673_multi_path.default.multi_test_shop",
+    "dst_table": "tn_24061673_multi_path.default.multi_test_orders",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "shop_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_orders",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "shop_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_shop",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-09 16:44:18.577000",
+    "gmt_update": "2025-09-09 16:44:18.577000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061673",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {
+      "dynamicConditions": [
+        "[multi_test_orders/${join_dt}] > [multi_test_shop/created_at]",
+        "${join_rel}"
+      ],
+      "dynamicSrcFilters": [
+        "[multi_test_shop/${dt}]=MAXVALUE([multi_test_shop/${dt}])",
+        "${dst_filter}"
+      ]
+    }
+  },
+  {
+    "id": 10000232,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061673_multi_path.default.multi_test_region",
+    "dst_table": "tn_24061673_multi_path.default.multi_test_orders",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "order_region",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_orders",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "address_code",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_region",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-09 16:48:19.636000",
+    "gmt_update": "2025-09-09 16:48:19.636000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061673",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000233,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061673_multi_path.default.multi_test_users",
+    "dst_table": "tn_24061673_multi_path.default.multi_test_orders",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "buyer_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_orders",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "user_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_users",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-09 16:50:15.393000",
+    "gmt_update": "2025-09-09 16:50:15.393000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061673",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000234,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061673_multi_path.default.multi_test_users",
+    "dst_table": "tn_24061673_multi_path.default.multi_test_orders",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "seller_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_orders",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "user_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_users",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-09 16:51:02.633000",
+    "gmt_update": "2025-09-09 16:51:02.633000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061673",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000235,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061673_multi_path.default.multi_test_product",
+    "dst_table": "tn_24061673_multi_path.default.multi_test_orders",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "product_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_orders",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "product_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_product",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-09 16:54:10.099000",
+    "gmt_update": "2025-09-09 16:54:10.099000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061673",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000241,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061673_multi_path.default.multi_test_category",
+    "dst_table": "tn_24061673_multi_path.default.multi_test_product",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "category_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_product",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "category_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_category",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-09 17:40:31.952000",
+    "gmt_update": "2025-09-09 17:40:31.952000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061673",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000236,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061673_multi_path.default.multi_test_region",
+    "dst_table": "tn_24061673_multi_path.default.multi_test_shop",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "address_code",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_shop",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "address_code",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_region",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-09 16:56:04.922000",
+    "gmt_update": "2025-09-09 16:56:04.922000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061673",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000239,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061673_multi_path.default.multi_test_product",
+    "dst_table": "tn_24061673_multi_path.default.multi_test_shop_product",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "product_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_shop_product",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "product_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_product",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-09 17:01:04.865000",
+    "gmt_update": "2025-09-09 17:01:04.865000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061673",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000240,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061673_multi_path.default.multi_test_shop",
+    "dst_table": "tn_24061673_multi_path.default.multi_test_shop_product",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "shop_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_shop_product",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "shop_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_shop",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-09 17:02:26.661000",
+    "gmt_update": "2025-09-09 17:02:26.661000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061673",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000237,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_MANY",
+    "direction": "SINGLE",
+    "src_table": "tn_24061673_multi_path.default.multi_test_region",
+    "dst_table": "tn_24061673_multi_path.default.multi_test_users",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "address_code",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_users",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "address_code",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_region",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-09 16:57:32.536000",
+    "gmt_update": "2025-09-09 16:57:32.536000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061673",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  },
+  {
+    "id": 10000238,
+    "model_id": null,
+    "name": null,
+    "desc": null,
+    "type": "ONE_TO_ONE",
+    "direction": "SINGLE",
+    "src_table": "tn_24061673_multi_path.default.multi_test_user_profile",
+    "dst_table": "tn_24061673_multi_path.default.multi_test_users",
+    "condition": [
+      {
+        "dstJoinKey": {
+          "column": "user_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_users",
+          "type": "NAME_REF"
+        },
+        "op": "=",
+        "srcJoinKey": {
+          "column": "user_id",
+          "tableRef": "tn_24061673_multi_path.default.multi_test_user_profile",
+          "type": "NAME_REF"
+        }
+      }
+    ],
+    "create_operator": null,
+    "update_operator": null,
+    "delete_operator": null,
+    "gmt_create": "2025-09-09 16:59:16.774000",
+    "gmt_update": "2025-09-09 16:59:16.774000",
+    "gmt_delete": null,
+    "is_deleted": false,
+    "src_constraints": "[]",
+    "dst_constraints": "[]",
+    "tenant_id": "tn_24061673",
+    "extra_constraint_config": {
+      "srcConstrains": {
+        "retainLatestData": false
+      }
+    },
+    "dynamic_settings": {}
+  }
+]

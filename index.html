@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多路径关系</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div id="graph-container"></div>
+    
+    <!-- 控制面板 -->
+    <div id="control-panel" class="control-panel">
+        <div class="control-group">
+            
+            <div class="control-item">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="输入tag_id" />
+                    <button id="search-btn" class="search-btn">搜索</button>
+                </div>
+            </div>
+            <div class="control-item">
+                <select id="tenant-select" class="tenant-select">
+                    <option value="">加载中...</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Condition悬浮窗口 -->
+    <div id="condition-popup" class="condition-popup" style="display: none;">
+        <div class="condition-header">
+            <h3>关系详情</h3>
+            <button id="close-popup" class="close-btn">&times;</button>
+        </div>
+        <div class="condition-content">
+            <div class="condition-info">
+                <p><strong>关系Id:</strong> <span id="popup-relation-id"></span></p>
+                <p><strong>关系类型:</strong> <span id="popup-relation-type"></span></p>
+                <p><strong>源表:</strong> <span id="popup-src-table"></span></p>
+                <p><strong>目标表:</strong> <span id="popup-dst-table"></span></p>
+            </div>
+            <div class="condition-details">
+                <h4>连接条件:</h4>
+                <pre id="popup-condition"></pre>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/data-processor.js"></script>
+    <script src="js/graph-renderer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
