@@ -419,7 +419,7 @@ class GraphRenderer {
         this.highlightEdgesByRelationIds(Array.from(relationIds));
         
         // 显示成功提示
-        this.showSearchSuccess(`找到 ${matchingTags.length} 个匹配的tag，涉及 ${relationIds.size} 个关系`);
+        // this.showSearchSuccess(`找到 ${matchingTags.length} 个匹配的tag，涉及 ${relationIds.size} 个关系`);
     }
 
     /**
@@ -572,12 +572,12 @@ class GraphRenderer {
         this.showSearchMessage(message, 'error');
     }
 
-    /**
-     * 显示搜索成功提示
-     */
-    showSearchSuccess(message) {
-        this.showSearchMessage(message, 'success');
-    }
+    // /**
+    //  * 显示搜索成功提示
+    //  */
+    // (message) {
+    //     this.showSearchMessage(message, 'success');
+    // }
 
     /**
      * 显示搜索消息弹窗
@@ -599,9 +599,9 @@ class GraphRenderer {
             top: 10%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: ${isError ? '#ff6b6b' : '#4CAF50'};
+            color: '#ff6b6b';
             background: white;
-            border: 1px solid ${isError ? '#ff6b6b' : '#4CAF50'};
+            border: 1px solid #ff6b6b;
             padding: 20px 30px;
             border-radius: 8px;
             z-index: 2000;
