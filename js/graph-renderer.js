@@ -599,7 +599,7 @@ class GraphRenderer {
             top: 10%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: '#ff6b6b';
+            color: #ff6b6b;
             background: white;
             border: 1px solid #ff6b6b;
             padding: 20px 30px;
